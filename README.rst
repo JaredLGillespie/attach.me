@@ -1,4 +1,4 @@
-Attach.Me
+Attach Me
 ========
 
 .. image:: https://img.shields.io/travis/JaredLGillespie/attach.me.svg
