@@ -70,8 +70,7 @@ use case for this is logging the beginning and ending of execution of a function
 
 .. code-block:: python
 
-    @attach(on_before=lambda: logging.info('Execution began'),
-                 on_after=lambda: logging.info('Execution ended')):
+    @attach(on_before=lambda: logging.info('Execution began'), on_after=lambda: logging.info('Execution ended'))
     def func():
         ...
 
@@ -88,7 +87,7 @@ of the ones passed in.
         # Do some stuff
         return new_string
 
-    @attach(on_before=lambda x: sanitize(x)):
+    @attach(on_before=lambda x: sanitize(x))
     def func(string):
         ...
 
