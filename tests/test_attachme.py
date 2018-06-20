@@ -124,7 +124,7 @@ class TestAttach(unittest.TestCase):
         with self.assertRaises(ValueError):
             attach(on_error=on_error)(func)(ValueError)
 
-        call.assert_called_once()
+        self.assertTrue(call.called)
 
     def test_on_return(self):
         call = Mock()
