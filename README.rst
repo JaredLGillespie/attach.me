@@ -26,9 +26,9 @@ a raised exception or specific return value.
 .. code-block:: python
 
     @attach(on_before=lambda: print('Initializing connection'),
-              on_after=lambda: print('Connect successfully established'),
-              on_error=lambda x: print('Erred establishing connection: %s' % x),
-              on_return=lambda x: print('Returned connection: %s' % x))
+            on_after=lambda: print('Connect successfully established'),
+            on_error=lambda x: print('Erred establishing connection: %s' % x),
+            on_return=lambda x: print('Returned connection: %s' % x))
     def connection(conn_str, params):
         conn = db(conn_str, params)
         return db.open()
@@ -55,12 +55,13 @@ The ``attach`` function contains the following signature:
 
 .. code-block:: python
 
-    def attach(on_before=None, on_after=None, on_error=None, on_return=None,
-                 override_error=False, override_return=False, before_has_kwargs=False):
+    @attach(on_before=None, on_after=None, on_error=None, on_return=None,
+            override_error=False, override_return=False, before_has_kwargs=False):
+	def func(...)
         ...
 
 It serves as both a function decorator, and a runnable wrapper and is configurable through it's dynamic parameters. Most
-of which are function callbacks which allow the user to highly configure the retrying behavior.
+of which are function callbacks which allow the user to highly configure the additional behavior.
 
 Before / After Execution
 ^^^^^^^^^^^^^^^^
