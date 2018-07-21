@@ -56,7 +56,7 @@ The ``attach`` function contains the following signature:
 .. code-block:: python
 
     @attach(on_before=None, on_after=None, on_error=None, on_return=None,
-            override_error=False, override_return=False, before_has_kwargs=False):
+            override_error=False, override_return=False, before_has_kwargs=False)
 	def func(...)
         ...
 
