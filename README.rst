@@ -1,5 +1,5 @@
 Attach Me
-========
+=========
 
 .. image:: https://img.shields.io/travis/JaredLGillespie/attach.me.svg
     :alt: Travis
@@ -57,14 +57,14 @@ The ``attach`` function contains the following signature:
 
     @attach(on_before=None, on_after=None, on_error=None, on_return=None,
             override_error=False, override_return=False, before_has_kwargs=False)
-	def func(...)
+    def func(...)
         ...
 
 It serves as both a function decorator, and a runnable wrapper and is configurable through it's dynamic parameters. Most
 of which are function callbacks which allow the user to highly configure the additional behavior.
 
 Before / After Execution
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Either prior to the wrapped function being executed, or afterwards, another function can be called. The most simplistic
 use case for this is logging the beginning and ending of execution of a function.
@@ -76,7 +76,7 @@ use case for this is logging the beginning and ending of execution of a function
         ...
 
 If an exception is raised by the wrapped function (or the ``on_before`` function), the ``on_after`` function isn't
-called
+called.
 
 More complex usage comes from digesting the parameters meant for the wrapped function and transforming them in some way.
 This is accomplished by simply returning an object from the ``on_before`` function and the values will be used instead
@@ -92,10 +92,10 @@ of the ones passed in.
     def func(string):
         ...
 
-If an iterable is returned, it is used as the *args of the wrapped function. The ``before_with_kwargs`` argument can be
-set to ``True`` to specify that the return value be used as the **kwargs of the wrapped function (which means it should
-be a dictionary. If an iterable is returned and this parameter is set, the last value is used as the **kwargs, and the
-rest as the *args.
+If an iterable is returned, it is used as the args of the wrapped function. The ``before_with_kwargs`` argument can be
+set to ``True`` to specify that the return value be used as the kwargs of the wrapped function (which means it should
+be a dictionary. If an iterable is returned and this parameter is set, the last value is used as the kwargs, and the
+rest as the args.
 
 .. code-block:: python
 
