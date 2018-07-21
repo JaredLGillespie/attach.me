@@ -8,7 +8,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='attach.me',
-    version='0.1.0',
+    version='0.1.1',
     description='A library for attaching additional functionality around existing functions.',
     long_description=long_description,
     url='https://github.com/jaredlgillespie/attach.me',
