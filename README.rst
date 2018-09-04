@@ -38,13 +38,13 @@ Installation
 
 The latest version of attach.me is available via ``pip``:
 
-.. code-block:: python
+.. code-block:: bash
 
     pip install attach.me
 
 Alternatively, you can download and install from source:
 
-.. code-block:: python
+.. code-block:: bash
 
     python setup.py install
 
